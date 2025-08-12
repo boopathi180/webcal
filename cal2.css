@@ -1,0 +1,102 @@
+
+/* Anime Calculator CSS Design */
+
+/* Background with animated gradient */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+ background-image: url("istockphoto-1419844586-612x612.jpg");
+  /* background-size: 400% 400%; */
+  animation: gradientBG 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Gradient animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Calculator container */
+.calculator {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
+  padding: 25px;
+  width: 320px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Display screen */
+.display {
+  background: #222;
+  color: #fff;
+  font-size: 2.2em;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: right;
+  margin-bottom: 20px;
+  box-shadow: inset 0 0 8px #000;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Buttons styling */
+button {
+  padding: 15px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 12px;
+  background: #ffe0f0;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Hover effect */
+button:hover {
+  background: #ffb6c1;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px #ff69b4;
+}
+
+/* Equals button */
+.equals {
+  grid-column: span 2;
+  background: #ff6f91;
+  color: white;
+}
+
+.equals:hover {
+  background: #ff4e7a;
+}
+
+/* Anime sparkle effect (optional) */
+button:active {
+  animation: sparkle 0.3s ease;
+}
+
+@keyframes sparkle {
+  0% { box-shadow: 0 0 5px #fff; }
+  50% { box-shadow: 0 0 15px #ff69b4; }
+  100% { box-shadow: 0 0 5px #fff; }
+}
